@@ -9,6 +9,6 @@
 
     - name: Printing URL with quotes 
       ansible.builtin.debug:
-        msg: url = {{URL}}
+        msg: "{{URL}}"
      vars:
         URL: task.google.com
