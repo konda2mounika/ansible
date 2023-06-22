@@ -1,0 +1,21 @@
+-name: Playbook name is Play1
+  hosts: all
+  tasks: 
+    -name: Print hello from task1
+      ansible.builtin.debug:
+        msg: Hai from the task1 of Play1
+
+    -name: Print hello from Play1
+      ansible.builtin.debug:
+        msg: Hai from the task2 of Play1
+
+-name: Playbook name is Play2
+  hosts: all
+  tasks: 
+    -name: Print hello from task1
+      ansible.builtin.debug:
+        msg: Hai from the task1 of Play2
+
+    -name: Print hello from Play1
+      ansible.builtin.debug:
+        msg: Hai from the task2 of Play2
