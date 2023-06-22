@@ -1,7 +1,7 @@
 - name: demo on variables
   hosts: all # all is default group in inventary file  which includes everything
   vars_files:
-          dev-vars.yml
+      dev-vars.yml
   vars:     #global variable
       URL: play.google.com
   tasks:
