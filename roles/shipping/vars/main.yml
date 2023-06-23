@@ -1,0 +1,4 @@
+APPUSER: roboshop
+APP_LOCATION: /home/{{APPUSER}}/{{COMPONENT}}/
+LOGTYPE: raw 
+LOGLOCATION: /var/log/shipping.log

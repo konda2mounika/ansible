@@ -1,14 +1,36 @@
-- name: demo on variables
-  hosts: all # all is default group in inventary file  which includes everything
-  vars:
-      URL: play.google.com
-  tasks:
-    - name: Printing  URL
+- name: demo on variables 
+  hosts: all  # all is default group in inventory file which includes everything 
+  vars:       # Global varibale
+      URL: play.google.com 
+  # vars_prompt:
+  #     - name: URL 
+  #       prompt: Enter URL  
+  #       private: no
+  tasks: 
+    - name: pritning URL  
       ansible.builtin.debug:
-        msg: Url that we print id {{URL}} 
+        msg: Url that we print is {{ URL }}  
 
-    - name: Printing URL with quotes 
+    - name: pritning URL with quotes  
       ansible.builtin.debug:
-        msg: "{{URL}}"
-      vars:
-        URL: task.google.com
+        msg: "{{ URL }}" 
+      vars:                 # local variable 
+        URL: task.google.com 
+
+    - name: Printing URL from CLI 
+      ansible.builtin.debug:
+        msg: URL_CLI is {{ CLI_URL }} 
+
+
+# {{URL}} : This is how you print a variable 
+
+# When to use "" for variables ? when the variable is the start of the line or the only one in the print list 
+
+# CLI Variable > local variable >  files_variables > prompt_variables >  global variable 
+# Prirting an undefined variable throws you exception.
+
+
+# Prompt variables : read -p 
+# read -p gives you interactive prompt to take inout from the the user 
+
+# But it breaks the script if the user doesn't give the input 

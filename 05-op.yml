@@ -8,7 +8,27 @@
     - name: printing out variable 
       debug: 
         msg: "{{OUT.stdout}}"
+  - name: demo on outputs 
+  hosts: all 
+  tasks:
+    - name: Running a shell command  
+      ansible.builtin.shell: uptime 
+      register: OUT
+    
+    - name: printing out variable 
+      debug: 
+        msg: "{{OUT.stdout}}"
   
+    - name: Declaring variable 
+      set_fact: 
+        STATUS: "{{OUT.rc}}"
+    
+    - name: printing the uptime status 
+      ansible.builtin.debug: 
+        msg: status of uptime is {{OUT.rc}}
+
+# set_fact is deprecated in version 6 , which used to work in verion 2.9
+# set_fact helps you inregistering the output 
     - name: Declaring variable 
       set_fact: 
         STATUS: "{{OUT.rc}}"
