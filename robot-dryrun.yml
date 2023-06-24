@@ -7,7 +7,7 @@
   vars:
     instance_type: "t2.micro"
     security_group_id: "sg-0d69e7c7a0f075716"  # Update as per your security group id
-    image: "ami-0a3c288ee30851908"             # Update this with the AMI ID in your account which has ansible installed.
+    image: "ami-0fd92c7198991d562"             # Update this with the AMI ID in your account which has ansible installed.
     region: "us-east-1"
   tasks:
     - name: Launch instance
