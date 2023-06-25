@@ -121,6 +121,8 @@ ansible-playbook 13-tags.yml  -t web
 Ansible pull needs ansible to installed and ensure version6 is the installed version
 
 
+
+
 # How to create an AMI with ANSIBLE ?
 1) Launch the machine with our lab image 
 2) Install ansible with curl command and also install boto : $ sudo pip3 install boto
