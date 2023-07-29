@@ -1,2 +1,0 @@
-- name: Set host name
-  ansible.builtin.shell: disable-auto-shutdown && set-hostname {{COMPONENT}}

@@ -1,4 +1,0 @@
-APP_LOCATION: /usr/share/nginx/html
-APPUSER: root 
-LOGTYPE: raw
-LOGLOCATION: /var/log/nginx/access.log
