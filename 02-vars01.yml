@@ -12,7 +12,7 @@
       ansible.builtin.debug:
         msg: Url that we print is {{ URL }}
 
-    - name: printing URL with quotes
+    - name: Printing URL with quotes
       ansible.builtin.debug:
       msg: "{{ URL }}"
 
